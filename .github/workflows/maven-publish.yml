@@ -3,7 +3,7 @@ name: Java CI with Maven
 on:
   push:
     branches:
-      - main  # You can change this to 'master' or other branch if necessary
+      - master  # You can change this to 'master' or other branch if necessary
   pull_request:
     branches:
       - main
