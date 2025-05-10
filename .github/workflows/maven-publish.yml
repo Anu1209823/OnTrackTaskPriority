@@ -6,7 +6,7 @@ on:
       - master  # You can change this to 'master' or other branch if necessary
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -22,7 +22,7 @@ jobs:
         java-version: '11'
 
     - name: Build with Maven
-      run: mvn clean install
+      run: mvn clean install -X
 
     - name: Run tests
       run: mvn test
