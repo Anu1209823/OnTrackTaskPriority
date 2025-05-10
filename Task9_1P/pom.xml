@@ -2,6 +2,7 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>task9_1</groupId>
@@ -9,60 +10,78 @@
   <version>0.0.1-SNAPSHOT</version>
 
   <name>Task9_1P</name>
-  <description>A simple Task9_1P.</description>
-  <!-- FIXME change it to the project's website -->
+  <description>A simple Task9_1P project.</description>
+  <!-- FIXME: Change it to the project's website -->
   <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>8</maven.compiler.source>
-    <maven.compiler.target>8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source> <!-- Update to Java 8, 11, or other versions as needed -->
+    <maven.compiler.target>1.8</maven.compiler.target> <!-- Update to Java 8, 11, or other versions as needed -->
   </properties>
 
+  <!-- Dependencies Section -->
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.13.2</version> <!-- Updated to JUnit 4.13.2 -->
+      <scope>test</scope> <!-- Test dependency -->
     </dependency>
   </dependencies>
 
   <build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+    <pluginManagement>
       <plugins>
+        <!-- Maven Clean Plugin -->
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.4.0</version>
         </plugin>
+
+        <!-- Maven Site Plugin -->
         <plugin>
           <artifactId>maven-site-plugin</artifactId>
           <version>3.12.1</version>
         </plugin>
+
+        <!-- Maven Project Info Reports Plugin -->
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.6.1</version>
         </plugin>
-        <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+
+        <!-- Maven Resources Plugin -->
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.3.1</version>
         </plugin>
+
+        <!-- Maven Compiler Plugin -->
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.13.0</version>
         </plugin>
+
+        <!-- Maven Surefire Plugin to run tests -->
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>3.3.0</version>
+          <version>3.0.0-M5</version> <!-- Latest version for Surefire Plugin -->
         </plugin>
+
+        <!-- Maven Jar Plugin -->
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.4.2</version>
         </plugin>
+
+        <!-- Maven Install Plugin -->
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
           <version>3.1.2</version>
         </plugin>
+
+        <!-- Maven Deploy Plugin -->
         <plugin>
           <artifactId>maven-deploy-plugin</artifactId>
           <version>3.1.2</version>
@@ -78,4 +97,5 @@
       </plugin>
     </plugins>
   </reporting>
+
 </project>
